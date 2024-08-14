@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<unistd.h>
-int main(int argc,char *argv[]){
-	int count=symlink(argv[1],argv[2]);
+#include<sys/stat.h>
+int main(){
+	int count=mknod("fifo1",0755,0);
 	if(count==0){
 		printf("successful");
 	}else{

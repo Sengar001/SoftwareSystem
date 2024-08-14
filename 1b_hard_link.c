@@ -1,12 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
-int main(int argc,char *argv[]){
-	int count=symlink(argv[1],argv[2]);
+int main(){
+	int count=link("File1","hardlink");
 	if(count==0){
 		printf("successful");
-	}else{
+	}
+	else{
 		printf("unsuccessful");
 	}
 	return 0;
 }
+
