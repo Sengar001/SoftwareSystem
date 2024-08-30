@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+int main(int argc,char* argv[]){
+	if(argc!=2){
+		printf("invalid arguments");
+		return -1;
+	}
+	struct ticket{
+		int window;
+		int ticket;
+	};
+	struct ticket r;
+	int fd=open(argv[1],O_RDWR);
+	printf("enter window number for ticket booking 1 2 3\n");
+	int p;
+	scanf("%d",&p);
+	lseek(fd,(p-1)*sizeof(struct ticket),SEEK_SET);
+	struct flock fc;
+	fc.l_type=F_WRLCK;
+	fc.l_whence=SEEK_CUR;
+	fc.l_start=0;
+	fc.l_len=sizeof(struct ticket);
+	int q=fcntl(fd,F_SETLKW,&fc);
+	if(q==-1){
+		printf("error");
+	}
+	read(fd,&r,sizeof(struct ticket));
+	printf("window: %d\nticket sold: %d\n",r.window,r.ticket);
+	r.ticket++;
+	lseek(fd,(p-1)*sizeof(struct ticket),SEEK_SET);
+	write(fd,&r,sizeof(struct ticket));
+	printf("press enter for ticket booking\n");
+	getchar();
+	getchar();
+	fc.l_type=F_UNLCK;
+	fcntl(fd,F_SETLK,&fc);
+	printf("window: %d\nyour ticket number: %d\n",r.window,r.ticket);
+	return 0;
+}
+
