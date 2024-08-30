@@ -1,3 +1,14 @@
+/*
+================================================================================================================
+Name: 29.c
+Author: Abhishek Singh Sengar
+Description: Write a program to get scheduling policy and modify the scheduling policy (SCHED_FIFO,
+SCHED_RR).
+Date: 30 Aug 2024
+================================================================================================================
+*/
+
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sched.h>
@@ -42,3 +53,15 @@ int main(){
 
 	return 0;
 }
+
+/*
+================================================
+Output: sudo ./a.out
+	[sudo] password for abhishek-singh-sengar: 
+	current scheduler is OTHER
+	enter the policy wants to modify 1.SHED_FIFO 2.SHED_RR 3.SHED_OTHER
+	2
+	current scheduler is RR
+================================================
+*/
+

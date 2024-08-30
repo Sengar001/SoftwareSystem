@@ -1,3 +1,14 @@
+/*
+============================================================================================================
+Name: 11c.c
+Author: Abhishek Singh Sengar
+Description: Write a program to open a file, duplicate the file descriptor and append the file with both the
+descriptors and check whether the file is updated properly or not.
+		c. use fcntl
+Date: 14 Aug 2024
+============================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
@@ -17,6 +28,16 @@ int main(int argc,char *argv[]){
 	write(dp,brr,20);
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out new.txt
+	cat new.txt
+	before copy
+	after copy
+================================================
+*/
+
 
 
 

@@ -1,3 +1,17 @@
+
+/*
+=========================================================================================================
+Name: 18b.c
+Author: Abhishek Singh Sengar
+Description: Write a program to perform Record locking.
+		a. Implement write lock
+		b. Implement read lock
+Create three records in a file. Whenever you access a particular record, first lock it then modify/access
+to avoid race condition.
+Date: 28 Aug 2024
+==========================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -36,4 +50,18 @@ int main(int argc,char* argv[]){
 	printf("lock released\n");
 	return 0;
 }
+
+/*
+=======================================================
+Output: ./a.out ticket.txt
+	enter window number for checking ticket 1 2 3
+	1
+	window: 1
+	ticket sold: 5
+	press enter to release lock
+            
+	lock released
+
+=======================================================
+*/
 

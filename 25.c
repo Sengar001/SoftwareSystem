@@ -1,3 +1,12 @@
+/*
+================================================================================================================
+Name: 25.c
+Author: Abhishek Singh Sengar
+Description:Write a program to create three child processes. The parent should wait for a particular child (use
+waitpid system call).
+Date: 29 Aug 2024
+================================================================================================================
+*/
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/wait.h>
@@ -36,3 +45,16 @@ int main(){
 	}
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out
+	enter parent wants to wait for child 1,2,3
+	2
+	waiting for second child
+	first child
+	second child
+
+================================================
+*/
+

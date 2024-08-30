@@ -1,3 +1,15 @@
+/*
+============================================================================================
+Name: 17b.c
+Author: Abhishek Singh Sengar
+Description:  Write a program to simulate online ticket reservation. Implement write lock
+Write a program to open a file, store a ticket number and exit. Write a separate program, to
+open the file, implement write lock, read the ticket number, increment the number and print
+the new ticket number then close the file.
+Date: 28 Aug 2024
+============================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -31,5 +43,26 @@ int main(int argc,char* argv[]){
 	fcntl(fd,F_SETLKW,&fc);
 	printf("your ticket no. = %d\n",ticket);
 	return 0;
-
 }
+
+/*
+================================================
+Output: terminal 1
+	./a.out temp.txt
+	ticket sold = 2
+	press enter for ticket booking
+
+	terminal 2
+	./a.out temp.txt
+	ticket sold = 3
+
+	terminal 3
+	./a.out temp.txt
+	ticket sold = 4
+
+	press enter for ticket booking
+	your ticket no. = 5
+
+================================================
+*/
+

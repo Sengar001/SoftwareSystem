@@ -1,3 +1,14 @@
+/*
+==========================================================
+Name: 16b.c
+Author: Abhishek Singh Sengar
+Description: Write a program to perform mandatory locking.
+		b. Implement read lock
+Date: 27 Aug 2024
+=========================================================
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
@@ -23,5 +34,19 @@ int main(int argc,char* argv[]){
 	if(p==-1){
 		printf("error");
 	}
+	printf("lock released\n");
 	return 0;
 }
+
+/*
+================================================
+Output: terminal 1
+	./a.out temp.txt
+	lock acquired
+	press enter to release lock
+
+	lock released
+
+================================================
+*/
+

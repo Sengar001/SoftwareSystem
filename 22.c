@@ -1,3 +1,13 @@
+/*
+================================================================================================================
+Name: 22.c
+Author: Abhishek Singh Sengar
+Description:Write a program, open a file, call fork, and then write to the file by both the child as well as the
+parent processes. Check output of the file.
+Date: 29 Aug 2024
+================================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -16,3 +26,13 @@ int main(int argc,char* argv[]){
 	}
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out temp.txt
+	cat temp.txt
+	I am ParentI am Child
+================================================
+*/
+
+

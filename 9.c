@@ -1,11 +1,31 @@
+/*
+==================================================================================
+Name: 9.c
+Author: Abhishek Singh Sengar
+Description: Write a program to print the following information about a given file.
+		a. inode
+		b. number of hard links
+		c. uid
+		d. gid
+		e. size
+		f. block size
+		g. number of blocks
+		h. time of last access
+		i. time of last modification
+		j. time of last change
+
+Date: 23 Aug 2024
+=================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/stat.h>
 #include<fcntl.h>
 #include<time.h>
-int main(){
+int main(int argc,char *argv[]){
 	struct stat inform;
-	int fd=open("line.txt",O_RDONLY);
+	int fd=open(argv[1],O_RDONLY);
 	if(fd==-1){
 		printf("error");
 	}
@@ -34,3 +54,22 @@ int main(){
 	printf("last change = %s\n",arr);
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out line.txt
+	inode = 4201682
+	hardlink = 1
+	uid = 1000
+	gid = 1000
+	size = 80
+	blocksize = 4096
+	blocks = 8
+	last access = 2024-08-30 14:14:29
+	last modified = 2024-08-27 22:27:31
+	last change = 2024-08-27 22:27:31
+
+================================================
+*/
+
+

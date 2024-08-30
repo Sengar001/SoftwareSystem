@@ -1,3 +1,12 @@
+/*
+===============================================================================
+Name: 12.c
+Author: Abhishek Singh Sengar
+Description: Write a program to find out the opening mode of a file. Use fcntl.	    
+Date: 22 Aug 2024
+==============================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -6,7 +15,7 @@ int main(int argc,char *argv[]){
 	if(argc<2){
 		printf("invalid arguments");
 	}
-	int fd=open(argv[1],O_CREAT|O_RDWR,0777);
+	int fd=open(argv[1],O_CREAT|O_RDWR);
 	if(fd==-1){
 		printf("error in opening file");
 	}
@@ -28,4 +37,11 @@ int main(int argc,char *argv[]){
 	}
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out new.txt
+	O_RDWR
+================================================
+*/
 

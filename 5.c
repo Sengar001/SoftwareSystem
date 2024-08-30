@@ -1,3 +1,13 @@
+/*
+===============================================================================================================
+Name: 5.c
+Author: Abhishek Singh Sengar
+Description: Write a program to create five new files with infinite loop. Execute the program in the background
+and check the file descriptor table at /proc/pid/fd.
+Date: 10 Aug 2024
+===============================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>

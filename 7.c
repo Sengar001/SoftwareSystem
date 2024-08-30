@@ -1,3 +1,12 @@
+/*
+=======================================================================
+Name: 7.c
+Author: Abhishek Singh Sengar
+Description: Write a program to copy file1 into file2 ($cp file1 file2).
+Date: 22 Aug 2024
+=======================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<fcntl.h>
@@ -16,3 +25,14 @@ int main(int argc,char* argv[]){
 	//write(1,f2,sizeof(f1));
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out f1.txt f2.txt
+	cat f1.txt
+	file1 exist
+	cat f2.txt
+	file2 exist file1 exist
+================================================
+*/
+

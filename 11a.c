@@ -1,3 +1,15 @@
+/*
+============================================================================================================
+Name: 11a.c
+Author: Abhishek Singh Sengar
+Description: Write a program to open a file, duplicate the file descriptor and append the file with both the
+descriptors and check whether the file is updated properly or not.
+		a. use dup
+Date: 22 Aug 2024
+============================================================================================================
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -18,4 +30,13 @@ int main(int argc,char *argv[]){
 	close(fd);
 	return 0;
 }
+
+/*
+================================================
+Output: ./a.out new.txt
+	cat new.txt
+	text before duplicacy
+	text after duplicacy
+================================================
+*/
 

@@ -1,3 +1,12 @@
+/*
+================================================================================================================
+Name: 30.c
+Author: Abhishek Singh Sengar
+Description: Write a program to run a script at a specific time using a Daemon process.
+Date: 30 Aug 2024
+================================================================================================================
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -21,9 +30,16 @@ int main(int argc,char *argv[]){
 		do{
 			time(&start);
 		}while(difftime(end,start)>0);
-		system("good morning");
+		system("echo good morning");
 	}else{
 		exit(0);
 	}
 }
+
+/*
+================================================
+Output: ./a.out 18 34 30
+	good morning
+================================================
+*/
 
