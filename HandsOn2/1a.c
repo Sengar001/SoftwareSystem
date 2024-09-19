@@ -20,7 +20,6 @@ int main(){
 		perror("error in setitimer\n");
 	}
 	while(1){
-		pause();
 	}
 	return 0;
 }

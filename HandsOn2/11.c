@@ -3,11 +3,13 @@
 #include<unistd.h>
 #include<signal.h>
 void stop(int sig){
+	printf("SIGINT is caught\n");
+	exit(0);
 }
 
 int main(){
 	struct sigaction s;
-	s.sa_handler=stop;
+	s.sa_handler=SIG_IGN;
 	s.sa_flags=0;
         int p=sigaction(SIGINT,&s,NULL);
         if(p==-1){
@@ -19,7 +21,14 @@ int main(){
         if(q==-1){
                 perror("error while sigaction\n");
         }
-        sleep(10);
+	s.sa_handler=stop;
+        p=sigaction(SIGINT,&s,NULL);
+        if(p==-1){
+                perror("error while sigaction\n");
+        }
+	while(1){
+	}
+
         return 0;
 }
 
