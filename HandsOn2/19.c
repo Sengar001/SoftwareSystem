@@ -1,3 +1,17 @@
+/*
+========================================================================================================
+Name : 19.a
+Author : Abhishek Singh Sengar
+Description : Create a FIFO file by 
+		a.mknod command
+		b.mkfifo command
+		c.use strace command to find out,which command(mknod or mkfifo) is better.
+		d.mknod system call
+		e.mkfifo library function
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<fcntl.h>
 #include<sys/stat.h>
@@ -20,4 +34,14 @@ int main(){
 	return 0;
 }
 
+/*
+========================================================================================================
+Output:
 
+sudo ./a.out
+successful
+successful
+
+
+========================================================================================================
+*/

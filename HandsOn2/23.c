@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 23
+Author : Abhishek Singh Sengar
+Description : Write a program to print the maximum number of files that can be opened within a process and size of a pipe (circular buffer).
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/stat.h>
@@ -21,3 +30,16 @@ int main(){
 	}
 	return 0;
 }
+
+
+/*
+========================================================================================================
+Output:
+
+./a.out
+maximum number of file can be opened 1024
+size of pipe 4096
+
+
+========================================================================================================
+*/

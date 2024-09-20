@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 22
+Author : Abhishek Singh Sengar
+Description : Write a program to wait for data to be written into FIFO within 10 seconds, use select system call with FIFO.
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<sys/stat.h>
 #include<sys/select.h>
@@ -28,3 +37,15 @@ int main(){
 	}
 	return 0;
 }
+
+
+/*
+========================================================================================================
+Output:
+
+./a.out
+data is recieved
+hii this is me!
+
+========================================================================================================
+*/

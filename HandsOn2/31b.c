@@ -1,45 +1,45 @@
 /*
 ========================================================================================================
-Name : 29
+Name : 31.b
 Author : Abhishek Singh Sengar
-Description : Write a program to remove the message queue.
+Description : Write a program to create a semaphore and initialize value to the semaphore.
+		b. Create a counting semaphore.
 Date: 12 Sept, 2024.
 ========================================================================================================
 */
 
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/ipc.h>
-#include<sys/msg.h>
+#include<sys/sem.h>
 int main(){
-	key_t key=ftok(".",1);
+	key_t key=ftok(".",2);
 	if(key==-1){
-		perror("ftok error");
+		perror("error in ftok");
 	}
-	int msg=msgget(key,IPC_CREAT|0700);
-	if(msg==-1){
-		perror("msgget error");
+	int sem_id=semget(key,1,IPC_CREAT|0777);
+	if(sem_id==-1){
+		perror("error in creating semaphore");
 	}
-	printf("key %d\n",key);
-	printf("message queue id %d\n",msg);
-	int send=msgctl(msg,IPC_RMID,NULL);
-	if(send==-1){
-		perror("error in removing message queue");
-	}else{
-		printf("message queue is removed successfuly\n");
+	union semun{
+		int val;
+	}semaphore;
+	semaphore.val=5;
+	int status=semctl(sem_id,0,SETVAL,semaphore);
+	if(status==-1){
+		perror("error in initializing semaphore");
 	}
+	printf("counting semaphore created successfully\n");
 	return 0;
 }
-
 
 /*
 ========================================================================================================
 Output:
 
 ./a.out
-key 17179822
-message queue id 2
-message queue is removed successfuly
+counting semaphore created successfully
 
 ========================================================================================================
 */

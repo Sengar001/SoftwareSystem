@@ -1,3 +1,13 @@
+/*
+========================================================================================================
+Name : 6
+Author : Abhishek Singh Sengar
+Description : Write a simple program to create three threads.
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>
@@ -27,3 +37,14 @@ int main(){
 	printf("all thread completed\n");
 	return 0;
 }
+
+/*
+========================================================================================================
+Output:
+running thread is 2
+running thread is 0
+running thread is 1
+all thread completed
+
+========================================================================================================
+*/

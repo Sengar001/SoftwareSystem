@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 4
+Author : Abhishek Singh Sengar
+Description : Write a program to measure how much time is taken to execute 100 getppid() system call. Use time stamp counter.
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/time.h>
@@ -15,4 +24,15 @@ int main(){
 	}
 	end=rdtsc();
 	printf("time taken to execute getpid %lld\n",end-start);
-}	
+}
+
+/*
+========================================================================================================
+Output:
+
+./a.out
+time taken to execute getpid 52293
+
+
+========================================================================================================
+*/

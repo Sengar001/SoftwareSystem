@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 8.b
+Author : Abhishek Singh Sengar
+Description : Write a separate program using signal system call to catch the following signals.
+		b. SIGINT
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -12,4 +21,18 @@ int main(){
 	}
         return 0;
 }
+
+
+/*
+========================================================================================================
+Output:
+
+./a.out
+Press Ctrl+C to trigger SIGINT...
+^C
+SIGSEGV caught
+
+
+========================================================================================================
+*/
 

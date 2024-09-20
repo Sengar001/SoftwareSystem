@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 16
+Author : Abhishek Singh Sengar
+Description : Write a program to send and receive data from parent to child vice versa. Use two way communication.
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
@@ -45,3 +54,12 @@ int main(){
         }
 }
 
+/*
+========================================================================================================
+Output:
+
+./a.out
+Hii child I am parent!Hii parent I am your child
+
+========================================================================================================
+*/

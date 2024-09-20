@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 28
+Author : Abhishek Singh Sengar
+Description : Write a program to change the existing message queue permission (use msqid_ds structure).
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/ipc.h>
@@ -31,3 +40,19 @@ int main(){
 	return 0;
 }
 
+
+
+/*
+========================================================================================================
+Output:
+
+./a.out
+key 17179822
+message queue id 2
+current mode 700
+message queue permission changes succesfuly!
+current mode 777
+
+
+========================================================================================================
+*/

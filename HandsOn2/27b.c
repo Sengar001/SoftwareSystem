@@ -1,3 +1,13 @@
+/*
+========================================================================================================
+Name : 27.b
+Author : Abhishek Singh Sengar
+Description : Write a program to receive messages from the message queue.
+		b. With IPC_NOWAIT as a flag
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/ipc.h>
@@ -26,3 +36,18 @@ int main(){
 	printf("received data %d\n",data.temp);
 	return 0;
 }
+
+
+
+/*
+========================================================================================================
+Output:
+
+./a
+key 17179822
+message queue id 2
+received data 1000
+
+
+========================================================================================================
+*/

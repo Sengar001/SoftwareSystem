@@ -1,3 +1,12 @@
+/*
+========================================================================================================
+Name : 20
+Author : Abhishek Singh Sengar
+Description : Write two programs so that both can communicate by FIFO - Use one way communication.
+Date: 12 Sept, 2024.
+========================================================================================================
+*/
+
 #include<stdio.h>
 #include<sys/stat.h>
 #include<fcntl.h>
